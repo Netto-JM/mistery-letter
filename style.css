@@ -1,8 +1,7 @@
-/* A classe magazine1 deve possuir background-color igual a rgb(0, 128, 128);
-A classe magazine1 deve possuir color igual a rgb(255, 255, 255);
-A classe magazine1 deve possuir font-family igual a Verdana;
-A classe magazine1 deve possuir font-weight igual a 900;
-A classe magazine1 deve possuir text-transform igual a uppercase. */
+/* A classe magazine2 deve possuir background-image igual a images/pink-pattern.png;
+A classe magazine2 deve possuir color igual a rgb(255, 0, 255);
+A classe magazine2 deve possuir font-family igual a Verdana;
+A classe magazine2 deve possuir font-weight igual a 900. */
 
 .newspaper {
   background-color: antiquewhite;
@@ -16,4 +15,11 @@ A classe magazine1 deve possuir text-transform igual a uppercase. */
   font-family: Verdana, Geneva, sans-serif;
   font-weight: 900;
   text-transform: uppercase;
+}
+
+.magazine2 {
+  background-image: url('images/pink-pattern.png');
+  color: fuchsia;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: 900;
 }
