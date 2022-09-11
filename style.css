@@ -1,0 +1,9 @@
+/* A classe newspaper deve possuir background-color igual a rgb(250, 235, 215);
+A classe newspaper deve possuir font-family igual a Times New Roman;
+A classe newspaper deve possuir font-weight igual a 700. */
+
+.newspaper {
+  background-color: antiquewhite;
+  font-family: Times New Roman, Times, Baskerville, Georgia, serif;
+  font-weight: 700;
+}
