@@ -24,8 +24,17 @@ function completeElementBuilder(element, text, parent, classArray) {
   return newElement;
 }
 
+function isInputEmpty() {
+  const noTextEntered = !letterTextEl.value.trim();
+  if (noTextEntered) {
+    appendTextNode(createdLetterEl, 'Por favor, digite o conteúdo da carta.');
+    return true;
+  }
+}
+
 function createLetter() {
   createdLetterEl.textContent = '';
+  if (isInputEmpty()) return;
   const letterTextArray = letterTextEl.value.split(' ');
   for (let index = 0; index < letterTextArray.length; index += 1) {
     const word = letterTextArray[index];
