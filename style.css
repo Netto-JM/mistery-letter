@@ -1,8 +1,3 @@
-/* A classe magazine2 deve possuir background-image igual a images/pink-pattern.png;
-A classe magazine2 deve possuir color igual a rgb(255, 0, 255);
-A classe magazine2 deve possuir font-family igual a Verdana;
-A classe magazine2 deve possuir font-weight igual a 900. */
-
 .newspaper {
   background-color: antiquewhite;
   font-family: Times New Roman, Times, Baskerville, Georgia, serif;
@@ -22,4 +17,19 @@ A classe magazine2 deve possuir font-weight igual a 900. */
   color: fuchsia;
   font-family: Verdana, Geneva, sans-serif;
   font-weight: 900;
+}
+
+.medium {
+  font-size: 20px;
+  padding: 8px;
+}
+
+.big {
+  font-size: 30px;
+  padding: 10px;
+}
+
+.reallybig {
+  font-size: 40px;
+  padding: 15px;
 }
