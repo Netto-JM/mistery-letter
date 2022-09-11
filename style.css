@@ -1,9 +1,19 @@
-/* A classe newspaper deve possuir background-color igual a rgb(250, 235, 215);
-A classe newspaper deve possuir font-family igual a Times New Roman;
-A classe newspaper deve possuir font-weight igual a 700. */
+/* A classe magazine1 deve possuir background-color igual a rgb(0, 128, 128);
+A classe magazine1 deve possuir color igual a rgb(255, 255, 255);
+A classe magazine1 deve possuir font-family igual a Verdana;
+A classe magazine1 deve possuir font-weight igual a 900;
+A classe magazine1 deve possuir text-transform igual a uppercase. */
 
 .newspaper {
   background-color: antiquewhite;
   font-family: Times New Roman, Times, Baskerville, Georgia, serif;
   font-weight: 700;
+}
+
+.magazine1 {
+  background-color: teal;
+  color: white;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
 }
