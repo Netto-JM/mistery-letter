@@ -1,4 +1,4 @@
-const letterTextEl = document.getElementById('carta-texto');
+const letterTextInputEl = document.getElementById('carta-texto');
 const wordCountEl = document.getElementById('carta-contador');
 const createLetterButtonEl = document.getElementById('criar-carta');
 const createdLetterEl = document.getElementById('carta-gerada');
@@ -26,7 +26,7 @@ function completeElementBuilder(element, text, parent, classArray) {
 }
 
 function isInputEmpty() {
-  const noTextEntered = !letterTextEl.value.trim();
+  const noTextEntered = !letterTextInputEl.value.trim();
   if (noTextEntered) {
     appendTextNode(createdLetterEl, 'Por favor, digite o conteúdo da carta.');
     return true;
@@ -56,7 +56,7 @@ function createLetter() {
   createdLetterEl.textContent = '';
   let wordCount = 0;
   if (isInputEmpty()) return;
-  const letterTextArray = letterTextEl.value.split(' ');
+  const letterTextArray = letterTextInputEl.value.split(' ');
   for (let index = 0; index < letterTextArray.length; index += 1) {
     const word = letterTextArray[index];
     if (word !== '') {
@@ -68,4 +68,13 @@ function createLetter() {
   wordCountEl.textContent = wordCount;
 }
 
+function changeRandomClasses(event) {
+  const clickedElement = event.target.closest('span');
+  const clickedWhiteSpace = !clickedElement;
+  if (clickedWhiteSpace) return;
+  clickedElement.className = '';
+  addClassesToElement(clickedElement, generateRandomClasses());
+}
+
 createLetterButtonEl.addEventListener('click', createLetter);
+createdLetterEl.addEventListener('click', changeRandomClasses);
