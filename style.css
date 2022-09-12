@@ -1,4 +1,59 @@
-/* stylelint-disable number-max-precision */
+/* Da linha 5 a 11, utilizando "Universal Box Sizing with Inheritance" para manter
+o tamanho dos itens de acordo com os valores pré-estabelecidos
+fonte: https://css-tricks.com/box-sizing/ */
+
+html {
+  box-sizing: border-box;
+}
+
+* , *:before , *:after {
+  box-sizing: inherit;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#carta-texto {
+  width: 50%;
+  height: 2rem;
+  border-radius: 5px;
+  margin-right: 5px;
+  border: 3px solid #ccc;
+  transition: 0.5s;
+  outline: none;
+}
+
+#carta-texto:focus {
+  border: 3px solid rgb(111, 157, 225);
+}
+
+#criar-carta {
+  border-radius: 7px;
+  height: 2rem;
+  background-color: white;
+  cursor: pointer;
+  box-shadow: 0 3px #eee;
+  transition: background-color 0.2s;
+}
+
+#criar-carta:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+#criar-carta:active {
+  background-color: rgb(240, 240, 240);
+  box-shadow: 0 1px rgb(240, 240, 240);
+  transform: translateY(4px);
+}
+
+.medium-font-size {
+  font-size: 1.5rem;
+}
+
 .newspaper {
   background-color: antiquewhite;
   font-family: Times New Roman, Times, Baskerville, Georgia, serif;
@@ -36,21 +91,26 @@
 }
 
 .rotateleft {
-  transform: matrix(0.996195, -0.0871557, 0.0871557, 0.996195, 0, 0);
+  transform: rotate(-5deg);
 }
 
 .rotateright {
-  transform: matrix(0.996195, 0.0871557, -0.0871557, 0.996195, 0, 0);
+  transform: rotate(5deg);
 }
 
 .skewleft {
-  transform: matrix(1, 0, 0.176327, 1, 0, 0);
+  transform: skewX(10deg);
 }
 
 .skewright {
-  transform: matrix(1, 0, -0.176327, 1, 0, 0);
+  transform: skewX(-10deg);
 }
 
-.inline {
-  display: inline;
+span {
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+}
+
+#carta-contador:before {
+  content: '\00a0 ';
 }
