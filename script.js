@@ -33,6 +33,25 @@ function isInputEmpty() {
   }
 }
 
+function getRandomElement(array) {
+  const randomIndex = Math.floor(Math.random() * array.length);
+  const randomElement = array[randomIndex];
+  return randomElement;
+}
+
+function generateRandomClasses() {
+  const styleGroup = ['newspaper', 'magazine1', 'magazine2'];
+  const sizeGroup = ['medium', 'big', 'reallybig'];
+  const rotationGroup = ['rotateleft', 'rotateright'];
+  const inclinationGroup = ['skewleft', 'skewright'];
+  const randomStyle = getRandomElement(styleGroup);
+  const randomSize = getRandomElement(sizeGroup);
+  const randomRotation = getRandomElement(rotationGroup);
+  const randomInclination = getRandomElement(inclinationGroup);
+  const randomClasses = [randomStyle, randomSize, randomRotation, randomInclination];
+  return randomClasses;
+}
+
 function createLetter() {
   createdLetterEl.textContent = '';
   let wordCount = 0;
@@ -41,7 +60,7 @@ function createLetter() {
   for (let index = 0; index < letterTextArray.length; index += 1) {
     const word = letterTextArray[index];
     if (word !== '') {
-      completeElementBuilder('span', word, createdLetterEl);
+      completeElementBuilder('span', word, createdLetterEl, generateRandomClasses());
       appendTextNode(createdLetterEl, ' ');
       wordCount += 1;
     }
